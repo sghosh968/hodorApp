@@ -2,6 +2,7 @@ import { createStackNavigator } from 'react-navigation';
 import TasksList from '../pages/tasks-list';
 import TaskDetails from '../pages/task-details';
 import TaskEdit from '../pages/task-edit';
+import NewTask from '../pages/new-task';
 
 const RootNavigator = createStackNavigator({
   AllTasks: {
@@ -20,6 +21,12 @@ const RootNavigator = createStackNavigator({
     screen: TaskEdit,
     navigationOptions: ({ navigation }) => ({
       title: 'Update task',
+    })
+  },
+  NewTask: {
+    screen: NewTask,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Add new task',
     })
   }
 });

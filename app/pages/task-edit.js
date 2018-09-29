@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import { bindActionCreators } from 'redux';
 import _ from 'lodash';
 import * as SessionActionCreators from '../actions/session';
+import AppActionButton from '../components/app-action-button';
 
 class TaskEdit extends Component {
   constructor(...args) {
@@ -17,6 +18,7 @@ class TaskEdit extends Component {
           title="Task edit screen"
           onPress={() => this.props.navigation.navigate('TaskDetails')}
         />
+        <AppActionButton />
       </View>
     );
   }

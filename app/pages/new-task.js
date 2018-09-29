@@ -6,18 +6,14 @@ import _ from 'lodash';
 import * as SessionActionCreators from '../actions/session';
 import AppActionButton from '../components/app-action-button';
 
-class TasksList extends Component {
+class NewTask extends Component {
   constructor(...args) {
     super(...args);
   }
   render() {
     return (
       <View style={styles.container}>
-        <Text>All Tasks</Text>
-        <Button
-          title="Task details screen"
-          onPress={() => this.props.navigation.navigate('EditTask')}
-        />
+        <Text>Add new Task</Text>
         <AppActionButton />
       </View>
     );
@@ -48,4 +44,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TasksList);
+)(NewTask);
