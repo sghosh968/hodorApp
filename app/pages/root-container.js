@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-// import Authenticated from './authenticated';
-// import Unauthenticated from './unauthenticated';
 import RootNavigator from '../navigators/root-navigator';
 import Unauthenticated from '../navigators/unauthenticated';
 import firebase from 'react-native-firebase';
@@ -16,25 +14,25 @@ class RootContainer extends Component {
     };
   }
 
-  componentDidMount() {
-    this.unsubscriber = firebase.auth().onAuthStateChanged((user) => {
-      this.setState({ user });
-    });
-  }
+  // componentDidMount() {
+  //   this.unsubscriber = firebase.auth().onAuthStateChanged((user) => {
+  //     this.setState({ user });
+  //   });
+  // }
 
-  componentWillUnmount() {
-    if (this.unsubscriber) {
-      this.unsubscriber();
-    }
-  }
+  // componentWillUnmount() {
+  //   if (this.unsubscriber) {
+  //     this.unsubscriber();
+  //   }
+  // }
 
   render() {
-    console.log('In render for RootContainer');
-    console.log('this.props');
-    console.log(this.props);
+    // console.log('In render for RootContainer');
+    // console.log('this.props');
+    // console.log(this.props);
     const isLoggedIn = _.get(this, 'props.isLoggedIn');
-    console.log('isLoggedIn');
-    console.log(isLoggedIn);
+    // console.log('isLoggedIn');
+    // console.log(isLoggedIn);
     if (isLoggedIn) {
       return <RootNavigator />;
     }

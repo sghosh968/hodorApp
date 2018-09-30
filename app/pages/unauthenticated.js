@@ -5,9 +5,6 @@ import { bindActionCreators } from 'redux';
 import _ from 'lodash';
 import * as SessionActionCreators from '../actions/session';
 
-console.log('SessionActionCreators');
-console.log(SessionActionCreators);
-
 class Unauthenticated extends Component {
   constructor(...args) {
     super(...args);

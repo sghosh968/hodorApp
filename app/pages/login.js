@@ -7,9 +7,6 @@ import firebase from 'react-native-firebase';
 import * as SessionActionCreators from '../actions/session';
 import Loader from '../components/loader';
 
-console.log('SessionActionCreators');
-console.log(SessionActionCreators);
-
 class Login extends Component {
   constructor(...args) {
     super(...args);
@@ -44,7 +41,6 @@ class Login extends Component {
   }
 
   render() {
-    console.log('Rendering Login page ....');
     const error = _.get(this.state, 'error');
     const showErrorMessage = _.isEmpty(error) === false;
     return (

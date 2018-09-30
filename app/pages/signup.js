@@ -7,9 +7,6 @@ import * as SessionActionCreators from '../actions/session';
 import firebase from 'react-native-firebase';
 import Loader from '../components/loader';
 
-console.log('SessionActionCreators');
-console.log(SessionActionCreators);
-
 class Signup extends Component {
   constructor(...args) {
     super(...args);
@@ -24,14 +21,14 @@ class Signup extends Component {
   }
 
   startSignup = async () => {
-    console.log('In method startSignup');
-    console.log(this.state);
+    // console.log('In method startSignup');
+    // console.log(this.state);
     this.props.signupPending();
     const email = _.get(this, 'state.email');
     const password = _.get(this, 'state.password');
     const signupResult = await firebase.auth().createUserWithEmailAndPassword(email, password);
-    console.log('signupResult');
-    console.log(signupResult);
+    // console.log('signupResult');
+    // console.log(signupResult);
   }
 
   render() {
@@ -71,8 +68,8 @@ const mapDispatchToProps = dispatch => bindActionCreators(SessionActionCreators,
 
 // State
 const mapStateToProps = state => {
-  console.log('updated state is :')
-  console.log(state);
+  // console.log('updated state is :')
+  // console.log(state);
   return {
     isLoggedIn: _.get(state, 'data.session.isLoggedIn', {}),
     pageIsAwaitingTransaction: _.get(state, 'ui.signup.awaitingTransaction', false)
