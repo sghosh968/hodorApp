@@ -14,25 +14,8 @@ class RootContainer extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.unsubscriber = firebase.auth().onAuthStateChanged((user) => {
-  //     this.setState({ user });
-  //   });
-  // }
-
-  // componentWillUnmount() {
-  //   if (this.unsubscriber) {
-  //     this.unsubscriber();
-  //   }
-  // }
-
   render() {
-    // console.log('In render for RootContainer');
-    // console.log('this.props');
-    // console.log(this.props);
     const isLoggedIn = _.get(this, 'props.isLoggedIn');
-    // console.log('isLoggedIn');
-    // console.log(isLoggedIn);
     if (isLoggedIn) {
       return <RootNavigator />;
     }

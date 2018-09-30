@@ -22,14 +22,10 @@ class Login extends Component {
   }
 
   startLogin = () => {
-    // console.log('In method startLogin');
-    // console.log(this.state);
     this.props.loginPending();
     const email = _.get(this, 'state.email');
     const password = _.get(this, 'state.password');
     firebase.auth().signInWithEmailAndPassword(email, password).then((loginResponse) => {
-      // console.log('loginResponse');
-      // console.log(loginResponse);
       this.props.loginSuccess();
       this.props.login();
     })

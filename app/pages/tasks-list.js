@@ -24,8 +24,6 @@ class TasksList extends Component {
 
 
   render() {
-    console.log('In render for TasksList');
-    console.log(this.props);
     const pageIsAwaitingTransaction = _.get(this, 'props.pageIsAwaitingTransaction', false);
     const tasks = _.get(this, 'props.tasks', []);
     return (

@@ -21,14 +21,10 @@ class Signup extends Component {
   }
 
   startSignup = async () => {
-    // console.log('In method startSignup');
-    // console.log(this.state);
     this.props.signupPending();
     const email = _.get(this, 'state.email');
     const password = _.get(this, 'state.password');
     const signupResult = await firebase.auth().createUserWithEmailAndPassword(email, password);
-    // console.log('signupResult');
-    // console.log(signupResult);
   }
 
   render() {

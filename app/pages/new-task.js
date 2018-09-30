@@ -46,8 +46,6 @@ class NewTask extends Component {
   }
 
   updateNotifyDateTimePickerVisibility = (visibilityFlag) => {
-    console.log('In method updateNotifyDateTimePickerVisibility');
-    console.log(visibilityFlag);
     this.setState({ isDateTimePickerVisible: !!visibilityFlag });
   }
 
@@ -56,7 +54,6 @@ class NewTask extends Component {
   }
 
   onNotifyAtCanceled = () => {
-    console.log('In method onNotifyAtCanceled');
     this.updateNotifyDateTimePickerVisibility(false);
   }
 
@@ -75,11 +72,8 @@ class NewTask extends Component {
 
   processAddTask = async () => {
     this.props.newTaskPageTransitionPending();
-    // console.log('In method processAddTask');
     const newTask = _.get(this, 'state.newTask');
     const addTaskResponse = await addDocument('tasks', newTask);
-    // console.log('addTaskResponse');
-    // console.log(addTaskResponse);
     this.props.addTask(addTaskResponse);
     this.props.newTaskPageTransitionComplete();
     this.resetComponentState();
@@ -91,12 +85,7 @@ class NewTask extends Component {
   }
 
   render() {
-    console.log('In render for NewTask');
-    console.log('State is');
-    console.log(this.state);
     const showNotifyAtField = _.get(this, 'state.showNotifyAtField', false);
-    // console.log('showNotifyAtField');
-    // console.log(showNotifyAtField);
     return (
       <View style={styles.container}>
         <Text>Add new Task</Text>
@@ -133,7 +122,7 @@ class NewTask extends Component {
           </View>
         }
         <Button
-          title='Signup'
+          title='Add task'
           onPress={() => this.processAddTask()}
         ></Button>
         < AppActionButton />

@@ -11,9 +11,6 @@ class AppActionButton extends Component {
         <ActionButton.Item buttonColor='#9b59b6' title="New Task" onPress={() => this.props.navigation.navigate('NewTask')}>
           <Icon name="md-create" style={styles.actionButtonIcon} />
         </ActionButton.Item>
-        <ActionButton.Item buttonColor='#3498db' title="Notifications" onPress={() => this.props.navigation.navigate('TaskDetails')}>
-          <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
-        </ActionButton.Item>
         <ActionButton.Item buttonColor='#1abc9c' title="All Tasks" onPress={() => { this.props.navigation.navigate('AllTasks') }}>
           <Icon name="md-done-all" style={styles.actionButtonIcon} />
         </ActionButton.Item>

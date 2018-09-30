@@ -138,7 +138,6 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-material-kit')
     implementation project(':react-native-firebase')
     implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
