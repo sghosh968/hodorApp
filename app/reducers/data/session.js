@@ -2,7 +2,7 @@ import { handleActions } from 'redux-actions';
 import { LOGIN, LOGOUT } from '../../actions/action-types';
 
 const defaultState = {
-  isLoggedIn: true
+  isLoggedIn: false
 };
 
 export default handleActions({
